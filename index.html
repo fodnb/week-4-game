@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DAN'S CRYSTAL COLLECTOR GAME</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="Assets/javascript/game.js"></script>
+<link rel="stylesheet" type="text/css" href="Assets/css/reset.css">
+<link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+
+<body>
+    <!-- DONT FORGET TO RELATIVE TO BOTH CSS/JQUERY/JS/BOOTSTRAP -->
+    <div id="title">
+        <h1> CRYSTAL COLLECTOR! </h1>
+    </div>
+    <div id="pdiv">
+        <p> You will be given a random nubmer at the start of the game</p>
+        <p> There are four crystals below. By clicking on a crystal you will add a specific amount to your total score.</p>
+        <p> You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <p> The value of each crystal is hidden from you until you click on it. </p>
+        <p> Each time when the game starts the game will change the value of each crystal.</p>
+    </div>
+    <!-- This div will have the random # on the left and then the 2 h1 tags will be where you're win/loss go. -->
+    <div id="guts">
+        <section>
+            <h1 id="answer"> 39 </h1>
+            <!-- This is where we will have our random # -->
+        </section>
+        <aside>
+            <h4 id="wins"> Wins:   </h4>
+            <h4 id="losses"> Losses: </h4>
+        </aside>
+    </div>
+    <div id="bigButton">
+        <div id="buttons">
+        </div>
+    </div>
+    <div id="scoreTotalText">
+        <p id="pScore"> Your total score is: </p>
+    </div>
+</body>
+<div id="foot">
+<footer>
+&copy Daniel McGhee 2017
+</footer>
+</div>
+</html>

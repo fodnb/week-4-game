@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+body {
+    margin: 0 auto;
+    overflow: auto;
+    max-width: 960px;
+    width: 100%;
+    background-image: url("../../Assets/images/background.jpg");
+    font-weight: 700;
+    font-size: 24px;
+}
+
+#guts {
+    height: 100px;
+}
+
+#answer {
+    color: limegreen;
+    font-size: 40px;
+    margin-left: 100px;
+}
+
+#wins {
+    color: blue;
+    font-weight: 700;
+    font-size: 35px;
+    margin-left: 100px;
+}
+
+#losses {
+    color: red;
+    font-weight: 700;
+    font-size: 35px;
+    margin-left: 100px;
+    height: 60px;
+}
+
+#title {
+    height: 75px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 35px;
+}
+
+#pScore {
+    text-align: center;
+}
+
+div {
+    background: black;
+    opacity: .75;
+    color: yellow;
+    overflow: auto;
+    margin: 0 auto;
+    border: 1px solid black;
+    height: 250px;
+    padding: 10px;
+    margin: 7px;
+}
+
+p {
+    padding: 10px;
+    overflow: auto;
+}
+
+#pdiv {
+    height: 250px;
+    font-size: 18px;
+}
+
+section {
+    float: left;
+    width: 40%;
+}
+
+aside {
+    float: left;
+    width: 25%;
+    border: 1 px solid #777;
+}
+
+.crystal {
+    clear: both;
+    width: 100%;
+    opacity: 1;
+}
+
+img {
+    clear: both;
+    width: 100px;
+    height: 100px;
+    float: left;
+    opacity: 1;
+}
+
+img {
+    opacity: 1;
+}
+
+#bigButton {
+    overflow: auto;
+    height: 180px;
+}
+
+#buttons {
+    overflow: auto;
+    /*was 135 px*/
+    height: 135px;
+    clear: both;
+    margin-left: 200px;
+}
+
+#scoreTotalText {
+    height: 75px;
+}
+
+#score {
+    height: 60px;
+}
+
+#foot {
+    height: 50px;
+    text-align: center;
+    color: red;
+}
