@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 
     // for when page loads all random #'s are on the page 
-    document.getElementById('answer').innerHTML = random;
+    $("#answer").html(random);
     randomArray();
 
 
@@ -43,14 +43,26 @@ $(document).ready(function() {
     // we change the html in the game to reflect the new values counter back to 0
     // new random #
     function startGame() {
+        $("#buttons").empty();
+       
+
         numOptions = [];
+        console.log(numOptions);
         random = 0;
         total = 0;
-        randomArray();
+        getRandomInteger();
         random = getRandomInteger(19, 121);
+        console.log(random);
+        randomArray();
         counter = 0;
+        makeButtons();
+        clicking();
+        // $("#pScore").html("Your total score is: " + counter);
         document.getElementById("pScore").innerHTML = "Your total score is: " + counter;
         document.getElementById("answer").innerHTML = random;
+
+
+
     }
 
 
@@ -59,6 +71,8 @@ $(document).ready(function() {
     // using the 4 images in buttons array and attaching one to each button[i]
     // attaching a value to each from numOptions array to give each a value
 
+
+function makeButtons(){
     for (var i = 0; i < numOptions.length; i++) {
         var newButton = $("<button>");
         newButton.attr("id", "mybutton" + [i]);
@@ -74,12 +88,15 @@ $(document).ready(function() {
         newImage.attr("data-cValue", numOptions[i]);
         $("#mybutton" + [i]).append(newImage);
     }
+}
 
-
-
+// makeButtons();
+startGame();
 
     // if user clicks on an image game will take the value from that button and makes it a number.
     // the game then adds that number to the current count
+  
+function clicking(){
     $(".images").on("click", function() {
         var cValue = ($(this).attr("data-cValue"));
         var cValue = parseInt(cValue);
@@ -89,6 +106,7 @@ $(document).ready(function() {
 
 
 
+   
 
         // here we just have our simple game rules.  Win is if the random # equals the counter
         // a loss is if we go over
@@ -105,9 +123,8 @@ $(document).ready(function() {
             startGame();
         }
 
-    });
-
-
+ });
+}
 
 
 

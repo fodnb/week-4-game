@@ -14,7 +14,9 @@ body {
     font-size: 24px;
 }
 
+
 #guts {
+	overflow: auto;
     height: 100px;
 }
 
@@ -27,16 +29,16 @@ body {
 #wins {
     color: blue;
     font-weight: 700;
-    font-size: 35px;
-    margin-left: 100px;
+    font-size: 25px;
+    margin: 10px 0 5px 100px;
 }
 
 #losses {
     color: red;
     font-weight: 700;
-    font-size: 35px;
+    font-size: 25px;
     margin-left: 100px;
-    height: 60px;
+
 }
 
 #title {
@@ -68,7 +70,7 @@ p {
 }
 
 #pdiv {
-    height: 250px;
+    height: 230px;
     font-size: 18px;
 }
 
@@ -94,16 +96,15 @@ img {
     width: 100px;
     height: 100px;
     float: left;
-    opacity: 1;
+
+ 
 }
 
-img {
-    opacity: 1;
-}
 
 #bigButton {
     overflow: auto;
     height: 180px;
+
 }
 
 #buttons {
@@ -112,6 +113,7 @@ img {
     height: 135px;
     clear: both;
     margin-left: 200px;
+
 }
 
 #scoreTotalText {
@@ -126,4 +128,15 @@ img {
     height: 50px;
     text-align: center;
     color: red;
+}
+h1 {
+	margin-top: 10px;
+	text-align: center;
+}
+
+button {
+	margin-left: 20px;
+}
+#mybutton0 {
+	margin-left: 0;
 }
