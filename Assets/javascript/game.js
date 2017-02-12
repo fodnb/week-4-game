@@ -57,9 +57,10 @@ $(document).ready(function() {
         counter = 0;
         makeButtons();
         clicking();
-        // $("#pScore").html("Your total score is: " + counter);
-        document.getElementById("pScore").innerHTML = "Your total score is: " + counter;
-        document.getElementById("answer").innerHTML = random;
+        $("#pScore").html("Your total score is: " + counter);
+        // document.getElementById("pScore").innerHTML = "Your total score is: " + counter;
+        $("#answer").html("# " + random);
+        // document.getElementById("answer").innerHTML = random;
 
 
 
@@ -98,15 +99,16 @@ startGame();
   
 function clicking(){
     $(".images").on("click", function() {
+         $(this).animate({ opacity: "0.75" });
+         $(this).animate({ opacity: "0.95" });
+         $(this).animate({ opacity: "0.75" });
+         $(this).animate({ opacity: "1" });
         var cValue = ($(this).attr("data-cValue"));
         var cValue = parseInt(cValue);
         counter += cValue;
         console.log(counter);
-        document.getElementById("pScore").innerHTML = "Your total Score is: " + counter;
-
-
-
-   
+        $("#pScore").html("Your total score is: " + counter);
+       
 
         // here we just have our simple game rules.  Win is if the random # equals the counter
         // a loss is if we go over
@@ -114,12 +116,14 @@ function clicking(){
         if (counter === random) {
             wins++;
             console.log(wins);
-            document.getElementById("wins").innerHTML = "Wins: " + wins;
+            $("#wins").html("Wins: " + wins);
+            // document.getElementById("wins").innerHTML = "Wins: " + wins;
             startGame();
         } else if (counter > random) {
             losses++;
             console.log(losses);
-            document.getElementById("losses").innerHTML = "Losses: " + losses;
+            $("#losses").html("Losses: " + losses);
+            // document.getElementById("losses").innerHTML = "Losses: " + losses;
             startGame();
         }
 
